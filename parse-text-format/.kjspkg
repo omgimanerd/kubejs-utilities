@@ -2,7 +2,7 @@
   "author": "omgimanerd",
   "description": "A text parsing utility to parse XML-like tags into Minecraft text components",
 
-  "versions": ["8", "9", "10"],
+  "versions": [8, 9, 10],
   "modloaders": ["forge"],
   "dependencies": [],
   "incompatibilities": []
