@@ -1,0 +1,8 @@
+{
+  "author": "omgimanerd",
+  "description": "A wrapper around KubeJS Create's sequenced assembly recipes that also allows for custom steps using Create's sequenced assembly NBT.",
+  "versions": [9, 10],
+  "modloaders": ["forge"],
+  "dependencies": ["mod:create"],
+  "incompatibilities": []
+}
