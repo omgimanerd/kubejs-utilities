@@ -2,10 +2,10 @@
 
 /**
  * Given a string or array of strings with XML-style opening and closing tags,
- * this helper returns a text component with the tag formatting applied.
+ * this helper returns a TextComponent with the tag formatting applied.
  * Unlike real XML, this syntax allows for tags to be overlapped.
  *
- * Any valid method of Internal.MutableComponent can be used as a tag.
+ * Any valid method of MutableComponent can be used as a tag.
  *
  * Example usage:
  *   global.parseTextFormat(
@@ -14,13 +14,24 @@
  *     '<italic>italic <green> italic and green </italic> green </green>')
  *
  * @param {string} t
- * @returns {Internal.MutableComponent}
+ * @returns {Internal.MutableComponent_}
  */
-global.parseTextFormat = (t) => {
+const parseTextFormat = (global.parseTextFormat = (t) => {
+  if (typeof t !== 'string') {
+    console.warn(`parseTextFormat received non-string input: ${t}`)
+    return Text.empty()
+  }
+
+  // Map of active modifiers.
   let modifiers = {}
-  let component = null
+  let component = Text.empty()
+  // Split the input text into parts separated by tags representing the text
+  // modifiers. The text modifiers are included in the parts array since they
+  // are part of the regex capture group.
   const parts = t.split(/(<\/{0,1}[a-zA-Z]+>)/)
   for (const /** @type {string} */ part of parts) {
+    // Determine whether the current split text text part is an opening or
+    // closing tag.
     let openMatch = part.match(/^<([a-zA-Z]+)>$/)
     let closeMatch = part.match(/^<\/([a-zA-Z]+)>$/)
     // If the split text part matches an open tag, add it to the modifiers
@@ -49,15 +60,17 @@ global.parseTextFormat = (t) => {
           console.warn(`Unknown modifier ${modifier} in ${t}`)
           continue
         }
+        // Modifiers are chainable method calls on the MutableComponent.
         newComponent = modifierCall.call(newComponent)
       }
-
-      if (component === null) {
-        component = newComponent
-      } else {
-        component = component.append(newComponent)
-      }
+      component.append(newComponent)
     }
   }
-  return component === null ? Text.empty() : component
-}
+
+  // Check for any unclosed modifiers at the end
+  for (const modifier of Object.keys(modifiers)) {
+    console.warn(`Unclosed modifier ${modifier} in ${t}`)
+  }
+
+  return component
+})
