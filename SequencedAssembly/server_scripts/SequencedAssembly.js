@@ -158,7 +158,7 @@ function SequencedAssembly(e, input, transitional) {
   // recipe schemas are available.
   if (
     Platform.isLoaded('vintageimprovements') &&
-    this.e_.recipes.vintageimprovements.curve &&
+    this.e_.recipes.vintageimprovements.curving &&
     this.e_.recipes.vintageimprovements.laser_cutting &&
     this.e_.recipes.vintageimprovements.vibrating
   ) {
