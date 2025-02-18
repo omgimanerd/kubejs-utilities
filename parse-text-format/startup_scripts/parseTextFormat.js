@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 999999
 
 /**
  * Given a string or array of strings with XML-style opening and closing tags,

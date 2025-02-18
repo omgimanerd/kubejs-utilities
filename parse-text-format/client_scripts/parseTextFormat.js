@@ -1,3 +1,3 @@
-// priority: 0
+// priority: 999999
 
 const parseTextFormat = global.parseTextFormat
