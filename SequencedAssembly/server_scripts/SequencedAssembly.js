@@ -135,7 +135,7 @@ function SequencedAssembly(e, input, transitional) {
   // is available.
   if (
     Platform.isLoaded('create_new_age') &&
-    this.e.recipes.create_new_age.energising
+    this.e_.recipes.create_new_age.energising
   ) {
     /**
      * @param {number} energyNeeded
@@ -158,9 +158,9 @@ function SequencedAssembly(e, input, transitional) {
   // recipe schemas are available.
   if (
     Platform.isLoaded('vintageimprovements') &&
-    this.e.recipes.vintageimprovements.curve &&
-    this.e.recipes.vintageimprovements.laser_cutting &&
-    this.e.recipes.vintageimprovements.vibrating
+    this.e_.recipes.vintageimprovements.curve &&
+    this.e_.recipes.vintageimprovements.laser_cutting &&
+    this.e_.recipes.vintageimprovements.vibrating
   ) {
     /**
      * @param {number|string} input
