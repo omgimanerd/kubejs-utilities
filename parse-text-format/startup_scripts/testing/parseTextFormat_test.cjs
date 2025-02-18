@@ -1,7 +1,7 @@
 /**
  * This file contains tests for parseTextFormat.js.
- * It is suffixed .mjs as an ES module to prevent it from being loaded by
- * KubeJS. However, this can be invoked as a node module.
+ * It is suffixed .cjs as an CommonJS module to prevent it from being loaded by
+ * KubeJS. It should be invoked with node for testing.
  */
 
 // Mock Text object to be used by parseTextFormat.js
