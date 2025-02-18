@@ -1,0 +1,14 @@
+{
+  "author": "omgimanerd",
+  "description": "A wrapper class around Create's sequenced assembly recipes.",
+  "versions": [
+    8,
+    9,
+    10
+  ],
+  "modloaders": [
+    "forge"
+  ],
+  "dependencies": [],
+  "incompatibilities": []
+}
