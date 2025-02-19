@@ -1,0 +1,14 @@
+{
+  "author": "omgimanerd",
+  "description": "A QoL script for the Minecraft note block that lets you shift its pitch downward by shift right clicking it with an empty hand.",
+  "versions": [
+    8,
+    9,
+    10
+  ],
+  "modloaders": [
+    "forge"
+  ],
+  "dependencies": [],
+  "incompatibilities": []
+}
