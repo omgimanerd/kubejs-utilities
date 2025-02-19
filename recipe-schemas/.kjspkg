@@ -1,0 +1,14 @@
+{
+  "author": "omgimanerd",
+  "description": "Recipe schema declarations for Apotheosis, Create Crafts & Additions, Create: New Age, Create Mechanical Extruder, Create: Vintage Improvements, Farmer's Delight, and PneumaticCraft: Repressurized.",
+  "versions": [
+    8,
+    9,
+    10
+  ],
+  "modloaders": [
+    "forge"
+  ],
+  "dependencies": [],
+  "incompatibilities": []
+}
