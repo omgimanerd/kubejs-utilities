@@ -8,7 +8,7 @@
  * recipes easier.
  *
  * Example usage:
- * new SequencedAssembly(e, 'minecraft:wooden_slabs')
+ * new SequencedAssembly(e, '#minecraft:wooden_slabs')
  *   .deploy('create:andesite_alloy')
  *   .deploy('create:shaft')
  *   .press(2)
