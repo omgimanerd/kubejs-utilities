@@ -1,0 +1,14 @@
+{
+  "author": "omgimanerd",
+  "description": "A script to register a keybind for reloading Kubejs scripts.",
+  "versions": [
+    8,
+    9,
+    10
+  ],
+  "modloaders": [
+    "forge"
+  ],
+  "dependencies": [],
+  "incompatibilities": []
+}
