@@ -11,9 +11,9 @@ ClientEvents.init(() => {
   const $GLFWKey = Java.loadClass('org.lwjgl.glfw.GLFW')
 
   global.RELOAD_KEY = new $KeyMapping(
-    'key.kubejs.reload',
+    'Reload KubeJS scripts', // Keybind name
     $GLFWKey.GLFW_KEY_R,
-    'key.categories.kubejs'
+    'KubeJS' // Keybind Category
   )
   $KeyMappingRegistry.register(global.RELOAD_KEY)
 })
